@@ -1,8 +1,5 @@
-/* TechForward College - Custom Styles */
-/* Project: College Recruitment Website - WDPP Y3 Warm-up */
-
 :root {
-    --primary-color: #0d6efd;
+    --primary-color: #CC0033;
     --secondary-color: #6c757d;
     --success-color: #198754;
     --info-color: #0dcaf0;
@@ -11,8 +8,6 @@
     --light-color: #f8f9fa;
     --dark-color: #212529;
 }
-
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -22,15 +17,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    padding-top: 76px; /* Account for fixed navbar */
+    padding-top: 76px;
 }
-
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Navigation Styles */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
@@ -51,10 +43,9 @@ html {
     transform: translateY(-1px);
 }
 
-/* Hero Section */
 .hero-section {
     height: 80vh;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #0a58ca 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #990024 100%);
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="grad" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" /></radialGradient></defs><circle cx="500" cy="500" r="400" fill="url(%23grad)"/></svg>');
     display: flex;
     align-items: center;
@@ -90,7 +81,6 @@ html {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Stats Section */
 .stat-card {
     padding: 2rem 1rem;
     transition: transform 0.3s ease;
@@ -105,7 +95,6 @@ html {
     transition: color 0.3s ease;
 }
 
-/* Animation Classes */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -117,7 +106,6 @@ html {
     transform: translateY(0);
 }
 
-/* Count-up Animation */
 @keyframes countUp {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -126,19 +114,16 @@ html {
 .counting {
     animation: countUp 0.5s ease-in-out;
 }
-
-/* Form Styles */
 .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(204, 0, 51, 0.25);
 }
 
 .form-select:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(204, 0, 51, 0.25);
 }
 
-/* Modal Enhancements */
 .modal-content {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -154,7 +139,6 @@ html {
     padding: 1.5rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     body {
         padding-top: 60px;
@@ -190,7 +174,6 @@ html {
     }
 }
 
-/* Loading Animation */
 .loading {
     display: inline-block;
     width: 20px;
@@ -205,7 +188,6 @@ html {
     to { transform: rotate(360deg); }
 }
 
-/* Success Message */
 .success-message {
     background-color: var(--success-color);
     color: white;
@@ -214,8 +196,6 @@ html {
     margin: 1rem 0;
     display: none;
 }
-
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }

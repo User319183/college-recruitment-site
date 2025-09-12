@@ -1,16 +1,18 @@
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Circle -->
-  <circle cx="20" cy="20" r="20" fill="#0d6efd"/>
+  <!-- Background Circle with Rutgers Red -->
+  <circle cx="20" cy="20" r="20" fill="#CC0033"/>
   
-  <!-- Book/Education Symbol -->
-  <rect x="10" y="12" width="20" height="16" rx="2" fill="white"/>
-  <rect x="12" y="14" width="16" height="2" fill="#0d6efd"/>
-  <rect x="12" y="18" width="12" height="1.5" fill="#0d6efd"/>
-  <rect x="12" y="21" width="14" height="1.5" fill="#0d6efd"/>
-  <rect x="12" y="24" width="10" height="1.5" fill="#0d6efd"/>
+  <!-- Shield Shape -->
+  <path d="M20 5 L30 12 L30 25 C30 30 20 35 20 35 C20 35 10 30 10 25 L10 12 Z" fill="white"/>
   
-  <!-- Graduation Cap -->
-  <polygon points="20,8 15,11 25,11" fill="white"/>
-  <rect x="24" y="9" width="1" height="4" fill="white"/>
-  <circle cx="24.5" cy="13.5" r="0.5" fill="white"/>
+  <!-- Inner Shield -->
+  <path d="M20 8 L27 13 L27 24 C27 27.5 20 32 20 32 C20 32 13 27.5 13 24 L13 13 Z" fill="#CC0033"/>
+  
+  <!-- "R" Letter -->
+  <path d="M16 15 L18 15 L18 25 L16 25 Z M16 15 L20 15 C21.5 15 22 16 22 17 C22 18 21.5 19 20 19 L18 19 M18 19 L22 25" 
+        fill="white" stroke="white" stroke-width="0.5" stroke-linejoin="round"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="15" cy="12" r="1" fill="white"/>
+  <circle cx="25" cy="12" r="1" fill="white"/>
 </svg>
