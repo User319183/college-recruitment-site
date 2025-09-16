@@ -29,7 +29,13 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#programs">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#campuses">Campuses</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#student-life">Student Life</a>
@@ -55,10 +61,25 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8">
                         <h1 class="display-3 fw-bold text-white mb-4">Discover Your Future at Rutgers University</h1>
-                        <p class="lead text-white mb-4">New Jersey's premier public research university, empowering students since 1766 with world-class education and unlimited opportunities.</p>
-                        <div class="hero-buttons">
-                            <button class="btn btn-light btn-lg me-3" onclick="showApplicationForm()">Apply Now</button>
-                            <a href="#programs" class="btn btn-outline-light btn-lg">Explore Programs</a>
+                        <p class="lead text-white mb-4">New Jersey's premier public research university, empowering students since 1766 with world-class education and unlimited opportunities across three dynamic campuses.</p>
+                        <div class="hero-buttons mb-4">
+                            <button class="btn btn-light btn-lg me-3" onclick="showApplicationForm()">
+                                <i class="bi bi-file-earmark-text me-2"></i>Apply Now
+                            </button>
+                            <a href="#programs" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-book me-2"></i>Explore Programs
+                            </a>
+                        </div>
+                        <div class="campus-badges">
+                            <span class="badge bg-light text-dark me-2">
+                                <i class="bi bi-geo-alt me-1"></i>New Brunswick
+                            </span>
+                            <span class="badge bg-light text-dark me-2">
+                                <i class="bi bi-geo-alt me-1"></i>Newark
+                            </span>
+                            <span class="badge bg-light text-dark">
+                                <i class="bi bi-geo-alt me-1"></i>Camden
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -72,45 +93,331 @@
             <div class="row text-center">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-card">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-people-fill text-primary" style="font-size: 2rem;"></i>
+                        </div>
                         <h3 class="display-4 text-primary fw-bold" id="student-count">0</h3>
                         <p class="lead">Students Enrolled</p>
+                        <p class="text-muted small">Across all campuses and programs</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-card">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-journal-bookmark-fill text-primary" style="font-size: 2rem;"></i>
+                        </div>
                         <h3 class="display-4 text-primary fw-bold" id="program-count">0</h3>
                         <p class="lead">Academic Programs</p>
+                        <p class="text-muted small">Undergraduate and graduate degrees</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-card">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-mortarboard-fill text-primary" style="font-size: 2rem;"></i>
+                        </div>
                         <h3 class="display-4 text-primary fw-bold" id="faculty-count">0</h3>
                         <p class="lead">Faculty Members</p>
+                        <p class="text-muted small">Renowned scholars and researchers</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="stat-card">
+                        <div class="stat-icon mb-3">
+                            <i class="bi bi-globe text-primary" style="font-size: 2rem;"></i>
+                        </div>
                         <h3 class="display-4 text-primary fw-bold" id="alumni-count">0</h3>
                         <p class="lead">Alumni Worldwide</p>
+                        <p class="text-muted small">Making an impact globally</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programs Section (placeholder) -->
-    <section id="programs" class="py-5">
+    <!-- Mission & Values Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">Why Choose Rutgers?</h2>
+                    <p class="lead mb-4">Founded in 1766, Rutgers stands as one of America's oldest and most prestigious public research universities, committed to excellence in education, research, and service.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-trophy-fill text-primary fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5>Academic Excellence</h5>
+                                    <p class="text-muted small">Top-ranked programs and world-renowned faculty</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-lightbulb-fill text-primary fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5>Innovation Hub</h5>
+                                    <p class="text-muted small">Cutting-edge research and breakthrough discoveries</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-people-fill text-primary fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5>Diverse Community</h5>
+                                    <p class="text-muted small">Students from all 50 states and 100+ countries</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-briefcase-fill text-primary fs-3"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5>Career Success</h5>
+                                    <p class="text-muted small">Strong alumni network and industry connections</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light p-4 rounded-3">
+                        <h3 class="fw-bold mb-3">Our Mission</h3>
+                        <blockquote class="blockquote">
+                            <p>"To serve the people of New Jersey, the nation, and the world through excellence and leadership in teaching, research, health care delivery, and community service."</p>
+                        </blockquote>
+                        
+                        <div class="mt-4">
+                            <h4 class="h5 fw-bold mb-3">Core Values</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Excellence</li>
+                                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Integrity</li>
+                                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Diversity</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Innovation</li>
+                                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Collaboration</li>
+                                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Service</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-4 fw-bold">Our Programs</h2>
-                    <p class="lead">Discover your passion and build your career with our industry-focused programs.</p>
+                    <h2 class="display-4 fw-bold">Our Schools & Programs</h2>
+                    <p class="lead">Discover world-class education across our renowned schools and colleges.</p>
                 </div>
             </div>
-            <!-- Program content will be added in later days -->
+            
             <div class="row">
-                <div class="col-12 text-center">
-                    <p class="text-muted">Program details coming soon...</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 program-card">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="bi bi-calculator text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title">School of Engineering</h5>
+                            <p class="card-text">Cutting-edge programs in mechanical, electrical, civil, and computer engineering with state-of-the-art facilities.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li>• Biomedical Engineering</li>
+                                <li>• Computer Science</li>
+                                <li>• Electrical Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 program-card">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="bi bi-graph-up text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title">Business School</h5>
+                            <p class="card-text">AACSB-accredited programs preparing leaders for the global marketplace with innovative curriculum.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li>• Finance & Economics</li>
+                                <li>• Marketing</li>
+                                <li>• Supply Chain Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 program-card">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="bi bi-heart-pulse text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title">School of Nursing</h5>
+                            <p class="card-text">Nationally ranked nursing programs with clinical partnerships at leading healthcare institutions.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li>• BSN Program</li>
+                                <li>• Nurse Practitioner</li>
+                                <li>• Healthcare Administration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 program-card">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="bi bi-book text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title">School of Arts & Sciences</h5>
+                            <p class="card-text">Liberal arts education fostering critical thinking across humanities, social sciences, and natural sciences.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li>• Psychology</li>
+                                <li>• Biology</li>
+                                <li>• English Literature</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 program-card">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="bi bi-capsule text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title">Ernest Mario School of Pharmacy</h5>
+                            <p class="card-text">Top-ranked pharmacy school with comprehensive PharmD program and research opportunities.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li>• Doctor of Pharmacy</li>
+                                <li>• Pharmaceutical Sciences</li>
+                                <li>• Clinical Research</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 program-card">
+                        <div class="card-body text-center">
+                            <div class="program-icon mb-3">
+                                <i class="bi bi-chat-quote text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title">School of Communication</h5>
+                            <p class="card-text">Dynamic programs in journalism, media studies, and strategic communication for the digital age.</p>
+                            <ul class="list-unstyled text-muted small">
+                                <li>• Journalism & Media</li>
+                                <li>• Strategic Communication</li>
+                                <li>• Digital Media</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <i class="bi bi-info-circle me-2"></i>Learn More About Our Programs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campuses Section -->
+    <section id="campuses" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-4 fw-bold">Our Campuses</h2>
+                    <p class="lead">Three distinct campuses, each offering unique opportunities and experiences.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 campus-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-building text-primary fs-2 me-3"></i>
+                                <div>
+                                    <h4 class="card-title mb-1">New Brunswick</h4>
+                                    <p class="text-muted small mb-0">Flagship Campus</p>
+                                </div>
+                            </div>
+                            <p class="card-text">The heart of Rutgers with comprehensive academic programs, world-class research facilities, and vibrant campus life.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle text-success me-2"></i>36,000+ students</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>100+ undergraduate majors</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>Big Ten athletics</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>Research opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 campus-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-buildings text-primary fs-2 me-3"></i>
+                                <div>
+                                    <h4 class="card-title mb-1">Newark</h4>
+                                    <p class="text-muted small mb-0">Urban Campus</p>
+                                </div>
+                            </div>
+                            <p class="card-text">Dynamic urban campus offering professional programs with close ties to New York City's business and cultural centers.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle text-success me-2"></i>12,000+ students</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>NYC proximity</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>Business & Law focus</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>Internship opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 campus-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-tree text-primary fs-2 me-3"></i>
+                                <div>
+                                    <h4 class="card-title mb-1">Camden</h4>
+                                    <p class="text-muted small mb-0">Riverside Campus</p>
+                                </div>
+                            </div>
+                            <p class="card-text">Intimate campus setting with personalized attention, strong community partnerships, and Philadelphia access.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle text-success me-2"></i>6,000+ students</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>Small class sizes</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>Philadelphia access</li>
+                                <li><i class="bi bi-check-circle text-success me-2"></i>Community engagement</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,13 +480,102 @@
         </div>
     </div>
 
-    <!-- Footer (placeholder) -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2025 Rutgers University. All rights reserved.</p>
-                    <p class="text-muted">New Brunswick, Newark, Camden | Founded 1766</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/logo.svg" alt="Rutgers University" width="40" height="40" class="me-2">
+                        <h5 class="mb-0">Rutgers University</h5>
+                    </div>
+                    <p class="text-light">New Jersey's premier public research university, serving students since 1766 with excellence in education, research, and community service.</p>
+                    
+                    <div class="social-links">
+                        <h6 class="fw-bold mb-2">Follow Us</h6>
+                        <a href="#" class="text-white me-3" title="Facebook">
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" title="Twitter">
+                            <i class="bi bi-twitter fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" title="Instagram">
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" title="LinkedIn">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </a>
+                        <a href="#" class="text-white" title="YouTube">
+                            <i class="bi bi-youtube fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#programs" class="text-light text-decoration-none">Academic Programs</a></li>
+                        <li><a href="#campuses" class="text-light text-decoration-none">Campuses</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Admissions</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Financial Aid</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Student Life</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Campus Locations</h6>
+                    <div class="mb-2">
+                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                        <strong>New Brunswick</strong><br>
+                        <small class="text-light">83 Somerset Street<br>New Brunswick, NJ 08901</small>
+                    </div>
+                    <div class="mb-2">
+                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                        <strong>Newark</strong><br>
+                        <small class="text-light">249 University Avenue<br>Newark, NJ 07102</small>
+                    </div>
+                    <div>
+                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                        <strong>Camden</strong><br>
+                        <small class="text-light">303 Cooper Street<br>Camden, NJ 08102</small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h6 class="fw-bold mb-3">Contact Information</h6>
+                    <div class="mb-2">
+                        <i class="bi bi-telephone text-primary me-2"></i>
+                        <a href="tel:+1-732-932-1766" class="text-light text-decoration-none">(732) 932-1766</a>
+                    </div>
+                    <div class="mb-2">
+                        <i class="bi bi-envelope text-primary me-2"></i>
+                        <a href="mailto:admissions@rutgers.edu" class="text-light text-decoration-none">admissions@rutgers.edu</a>
+                    </div>
+                    <div class="mb-3">
+                        <i class="bi bi-globe text-primary me-2"></i>
+                        <a href="https://www.rutgers.edu" class="text-light text-decoration-none">www.rutgers.edu</a>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <button class="btn btn-primary btn-sm" onclick="showApplicationForm()">
+                            <i class="bi bi-file-earmark-text me-1"></i>Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0">&copy; 2025 Rutgers, The State University of New Jersey. All rights reserved.</p>
+                    <small class="text-muted">Founded 1766 | New Brunswick, Newark, Camden</small>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <small class="text-muted">
+                        <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-light text-decoration-none">Terms of Use</a>
+                    </small>
                 </div>
             </div>
         </div>
