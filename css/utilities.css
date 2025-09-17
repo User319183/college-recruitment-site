@@ -1,0 +1,225 @@
+.surface {
+    position: relative;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: 28px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .04), 0 4px 18px -8px rgba(0, 0, 0, .12);
+    transition: background .45s var(--cubic-bezier), box-shadow .45s var(--cubic-bezier), transform .45s var(--cubic-bezier);
+    isolation: isolate
+}
+
+.surface::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 85% 15%, rgba(204, 0, 51, 0.08), transparent 60%);
+    opacity: .85;
+    pointer-events: none;
+    transition: opacity .6s var(--cubic-bezier)
+}
+
+.surface::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--gradient-sheen);
+    background-size: 180% 100%;
+    background-position: -120% 0;
+    opacity: 0;
+    pointer-events: none;
+    filter: blur(.5px);
+    transition: background-position 1.2s cubic-bezier(.22, .61, .36, 1), opacity .6s
+}
+
+.surface:hover {
+    box-shadow: 0 6px 30px -8px rgba(0, 0, 0, .25), 0 12px 38px -10px rgba(0, 0, 0, .18);
+    transform: translateY(-6px)
+}
+
+.surface:hover::after {
+    opacity: 1;
+    background-position: 120% 0
+}
+
+.surface:focus-within,
+.surface.is-focus {
+    box-shadow: var(--shadow-focus-ring);
+    outline: none
+}
+
+.surface.gradient-edge {
+    border: 1px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box, var(--gradient-accent) border-box
+}
+
+.surface.minimal {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .08)
+}
+
+.surface[data-interactive=true] {
+    cursor: pointer
+}
+
+.surface[data-interactive=true]:active {
+    transform: translateY(-2px) scale(.985)
+}
+
+.elev-0 {
+    box-shadow: none !important
+}
+
+.elev-1 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .06) !important
+}
+
+.elev-2 {
+    box-shadow: 0 4px 14px -4px rgba(0, 0, 0, .18) !important
+}
+
+.elev-3 {
+    box-shadow: 0 8px 28px -6px rgba(0, 0, 0, .22) !important
+}
+
+.elev-4 {
+    box-shadow: 0 14px 42px -10px rgba(0, 0, 0, .28) !important
+}
+
+.card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: stretch
+}
+
+.card-grid.tight {
+    gap: 1.25rem
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px) scale(.98);
+    transition: opacity .8s var(--cubic-bezier), transform .8s var(--cubic-bezier)
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1)
+}
+
+.reveal[data-delay] {
+    transition-delay: var(--reveal-delay, 0s)
+}
+
+.surface.accent-bar {
+    padding-top: 1.35rem
+}
+
+.surface.accent-bar::before {
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    height: 5px;
+    inset: auto 0 0 0;
+    top: 0;
+    opacity: 1
+}
+
+.surface.accent-bar:hover::before {
+    filter: brightness(1.1)
+}
+
+.surface.glass {
+    background: rgba(255, 255, 255, .82);
+    backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, .4)
+}
+
+.surface.glass.dark {
+    background: rgba(33, 37, 41, .68);
+    color: #fff
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .surface,
+    .program-item,
+    .campus-item,
+    .life-unit,
+    .life-panel,
+    .stat-card,
+    .reveal {
+        transition: none !important
+    }
+
+    .surface:hover,
+    .program-item:hover,
+    .campus-item:hover,
+    .life-unit:hover,
+    .life-panel:hover,
+    .stat-card:hover {
+        transform: none !important
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-color)
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0a58ca
+}
+
+body.dark-mode .surface,
+body.dark-mode .program-item,
+body.dark-mode .campus-item,
+body.dark-mode .life-unit,
+body.dark-mode .life-panel,
+body.dark-mode .stat-card {
+    background: linear-gradient(145deg, #262a2e, #1e2124);
+    border-color: rgba(255, 255, 255, .07);
+    color: var(--gray-100)
+}
+
+body.dark-mode .program-item::after,
+body.dark-mode .campus-item::after {
+    background: radial-gradient(circle at 80% 15%, rgba(204, 0, 51, 0.35), transparent 70%)
+}
+
+body.dark-mode .pi-text,
+body.dark-mode .ci-text,
+body.dark-mode .life-unit p,
+body.dark-mode .life-panel p {
+    color: var(--gray-300)
+}
+
+body.dark-mode .pi-list li,
+body.dark-mode .ci-facts li {
+    background: rgba(204, 0, 51, 0.25);
+    color: #fff
+}
+
+body.dark-mode .ci-tag {
+    background: var(--primary-light)
+}
+
+@media (forced-colors:active) {
+
+    .surface,
+    .program-item,
+    .campus-item,
+    .life-unit,
+    .life-panel,
+    .stat-card {
+        forced-color-adjust: auto;
+        border: 1px solid CanvasText
+    }
+}

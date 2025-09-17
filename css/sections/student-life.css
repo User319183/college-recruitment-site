@@ -1,0 +1,151 @@
+#student-life {
+    position: relative;
+    z-index: 1
+}
+
+#student-life .section-title {
+    margin-bottom: 2.25rem
+}
+
+#student-life .nav-pills {
+    margin-bottom: 1.85rem;
+    flex-wrap: wrap;
+    gap: .55rem .65rem
+}
+
+#student-life .tab-pane {
+    animation: fadeIn .5s var(--cubic-bezier)
+}
+
+.life-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr))
+}
+
+.life-grid.tight {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.25rem
+}
+
+.life-unit .icon-wrapper {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fff, #f4f5f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .85rem;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06)
+}
+
+.life-unit .icon-wrapper i {
+    font-size: 1.1rem;
+    color: var(--primary-color)
+}
+
+.life-unit h5 {
+    margin-bottom: .4rem;
+    font-weight: 600
+}
+
+.life-unit p {
+    margin: 0;
+    color: var(--gray-600)
+}
+
+.life-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.life-panel h5,
+.life-panel h6 {
+    margin-bottom: .55rem;
+    font-weight: 600
+}
+
+.life-panel table {
+    font-size: .72rem;
+    border-radius: 12px;
+    overflow: hidden
+}
+
+.life-panel table tbody tr {
+    transition: var(--transition-fast)
+}
+
+.life-panel table tbody tr:hover {
+    background: rgba(0, 0, 0, .03)
+}
+
+.life-panel table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: .6rem;
+    letter-spacing: .5px;
+    color: var(--gray-600)
+}
+
+.life-panel table td,
+.life-panel table th {
+    padding: .5rem .65rem;
+    vertical-align: middle
+}
+
+.life-panel small {
+    display: block;
+    font-size: .6rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-top: auto;
+    padding-top: .6rem
+}
+
+.life-panel .chart-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff, #f4f5f7);
+    border-radius: 16px;
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 600;
+    color: var(--gray-600);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06)
+}
+
+@media (max-width:768px) {
+    #student-life .nav-pills .nav-link {
+        padding: .5rem 1rem
+    }
+
+    #student-life .nav-pills {
+        gap: .45rem .5rem;
+        margin-bottom: 1.5rem
+    }
+
+    .life-grid {
+        gap: 1.25rem
+    }
+
+    .life-unit,
+    .life-panel {
+        padding: 1.1rem 1.1rem .95rem
+    }
+
+    .life-unit h5,
+    .life-panel h5,
+    .life-panel h6 {
+        font-size: .85rem
+    }
+
+    .life-unit p,
+    .life-panel p {
+        font-size: .75rem
+    }
+}

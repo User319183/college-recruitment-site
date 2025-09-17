@@ -1,0 +1,113 @@
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #ececec;
+    padding: 3.5rem 0 2.5rem;
+    position: relative;
+    overflow: hidden
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.08), transparent 60%), radial-gradient(circle at 15% 85%, rgba(255, 255, 255, 0.06), transparent 60%);
+    opacity: .6;
+    pointer-events: none
+}
+
+footer h5 {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #fff
+}
+
+footer p,
+footer a,
+footer li {
+    font-size: .75rem;
+    color: #c9c9c9
+}
+
+footer a {
+    text-decoration: none;
+    transition: var(--transition-fast)
+}
+
+footer a:hover {
+    color: #fff
+}
+
+footer .social-links a {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    margin-right: .35rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    color: #fff;
+    font-size: .9rem;
+    transition: var(--transition-fast)
+}
+
+footer .social-links a:hover {
+    background: var(--primary-color);
+    box-shadow: 0 4px 12px -3px rgba(204, 0, 51, 0.5)
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 2rem 0 1.5rem
+}
+
+footer .copyright {
+    font-size: .65rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 24px -6px rgba(204, 0, 51, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition-smooth);
+    z-index: 999
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0)
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark)
+}
+
+@media (max-width:576px) {
+    footer {
+        padding: 3rem 0 2rem
+    }
+
+    footer .col-md-3:not(:last-child) {
+        margin-bottom: 2rem
+    }
+}

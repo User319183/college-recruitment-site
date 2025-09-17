@@ -1,0 +1,152 @@
+.program-card {
+    display: none
+}
+
+.program-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    transform: translateX(-100%);
+    transition: transform .6s var(--cubic-bezier)
+}
+
+.program-card:hover::before {
+    transform: translateX(0)
+}
+
+.program-card:hover {
+    box-shadow: var(--shadow-hover)
+}
+
+.program-card .card-body {
+    padding: 2.5rem 2rem;
+    position: relative;
+    z-index: 2
+}
+
+.program-card .program-icon {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    transition: var(--transition-smooth)
+}
+
+.program-card:hover .program-icon {
+    transform: scale(1.1);
+    color: var(--primary-light)
+}
+
+.program-card .card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    transition: var(--transition-smooth)
+}
+
+.program-card:hover .card-title {
+    color: var(--primary-dark)
+}
+
+.program-card .card-text {
+    color: var(--medium-gray);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7
+}
+
+.program-card ul li {
+    padding: .25rem 0;
+    color: var(--medium-gray);
+    font-size: .9rem;
+    position: relative;
+    padding-left: 1.2rem
+}
+
+.program-card ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700
+}
+
+.timeline li {
+    position: relative;
+    padding-left: .5rem
+}
+
+#cost-aid .card h6 {
+    font-size: .95rem
+}
+
+#cost-aid table td,
+#cost-aid table th {
+    font-size: .8rem
+}
+
+#alumni .stat-card {
+    padding: 1.75rem 1.25rem;
+    background: #fff
+}
+
+#alumni .stat-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: .25rem
+}
+
+.feature-panel {
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: 40px;
+    padding: 2.75rem 2.25rem;
+    background: linear-gradient(150deg, #ffffff 0%, #f7f8f9 100%);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden
+}
+
+.feature-panel:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 85% 15%, rgba(204, 0, 51, 0.08), transparent 60%);
+    pointer-events: none
+}
+
+.feature-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+}
+
+#contact form {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: 34px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-soft)
+}
+
+#contact .card {
+    border-radius: 34px
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
