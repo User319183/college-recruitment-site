@@ -1,11 +1,13 @@
 .hero-section {
-    min-height: 92vh;
+    min-height: calc(100vh - var(--nav-height));
+    min-height: calc(100svh - var(--nav-height));
     background: radial-gradient(circle at 30% 30%, #d91d48 0%, var(--primary-dark) 55%, #5d0016 100%);
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     margin-bottom: 0;
+    padding: 0;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px
 }

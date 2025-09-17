@@ -41,4 +41,5 @@
     --gradient-accent: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     --gradient-soft: linear-gradient(145deg, #ffffff, #f5f6f8);
     --gradient-sheen: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 40%);
+    --nav-height: 72px;
 }
