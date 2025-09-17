@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCounters();
     initializeScrollEffects();
     initializeNavigation();
+    initializeInfoRequestForm();
+    initializeRevealAnimations();
     
     console.log('All interactive elements initialized');
 });
@@ -112,6 +114,22 @@ function initializeScrollEffects() {
         fadeObserver.observe(element);
     });
 }
+function initializeRevealAnimations() {
+    const revealEls = document.querySelectorAll('.reveal');
+    if (!revealEls.length) return;
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const delay = target.getAttribute('data-delay');
+                if (delay) target.style.setProperty('--reveal-delay', delay);
+                target.classList.add('visible');
+                obs.unobserve(target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+}
 function showApplicationForm() {
     const modal = new bootstrap.Modal(document.getElementById('applicationModal'));
     modal.show();
@@ -176,6 +194,69 @@ function showSuccessMessage(message) {
 }
 function trackEvent(eventName, eventData) {
     console.log(`Event tracked: ${eventName}`, eventData);
+}
+function initializeInfoRequestForm() {
+    const form = document.getElementById('infoRequestForm');
+    if (!form) return;
+    ['riFirstName','riLastName','riEmail'].forEach(id => {
+        const el = document.getElementById(id);
+        el && el.addEventListener('input', () => validateBasic(el));
+    });
+}
+function validateBasic(field) {
+    if (!field) return;
+    if (field.checkValidity()) {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+    } else {
+        field.classList.remove('is-valid');
+        field.classList.add('is-invalid');
+    }
+}
+function submitInfoRequest() {
+    const form = document.getElementById('infoRequestForm');
+    if (!form) return;
+    const requiredIds = ['riFirstName','riLastName','riEmail'];
+    let valid = true;
+    requiredIds.forEach(id => {
+        const field = document.getElementById(id);
+        if (!field.checkValidity()) {
+            field.classList.add('is-invalid');
+            valid = false;
+        }
+    });
+    if (!valid) return;
+    const btn = document.getElementById('infoSubmitBtn');
+    const original = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<span class="loading"></span> Sending...';
+    const payload = {
+        firstName: document.getElementById('riFirstName').value.trim(),
+        lastName: document.getElementById('riLastName').value.trim(),
+        email: document.getElementById('riEmail').value.trim(),
+        interest: document.getElementById('riInterest').value,
+        message: document.getElementById('riMessage').value.trim(),
+        submittedAt: new Date().toISOString()
+    };
+    setTimeout(() => {
+        console.log('Info request submitted', payload);
+        const success = document.getElementById('infoSuccess');
+        if (success) {
+            success.classList.remove('d-none');
+            success.textContent = 'Thank you! Your request has been received. We will respond shortly.';
+        }
+        form.reset();
+        btn.disabled = false;
+        btn.innerHTML = original;
+        trackEvent('info_request_submitted', payload.interest);
+    }, 1500);
+}
+function filterPrograms(criteria) {
+    const cards = document.querySelectorAll('#programs [data-category]');
+    cards.forEach(card => {
+        const matches = criteria === 'all' || card.getAttribute('data-category') === criteria;
+        card.style.display = matches ? '' : 'none';
+    });
 }
 function debounce(func, wait) {
     let timeout;

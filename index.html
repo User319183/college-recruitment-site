@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rutgers University - Excellence in Education</title>
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#home">
@@ -54,7 +50,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-overlay">
             <div class="container">
@@ -255,115 +250,83 @@
                 <h2 class="display-4 fw-bold">Schools & Programs</h2>
                 <p class="lead">Discover world-class education across our renowned schools and colleges</p>
             </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card program-card">
-                        <div class="card-body text-center">
-                            <div class="program-icon">
-                                <i class="bi bi-calculator text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h5 class="card-title">School of Engineering</h5>
-                            <p class="card-text">Cutting-edge programs in mechanical, electrical, civil, and computer engineering with state-of-the-art facilities.</p>
-                            <ul class="list-unstyled text-start">
-                                <li>• Biomedical Engineering</li>
-                                <li>• Computer Science</li>
-                                <li>• Electrical Engineering</li>
-                            </ul>
-                        </div>
+            <div class="programs-grid minimal-grid">
+                <div class="program-item surface reveal" data-delay="0s" data-category="engineering" data-level="undergraduate graduate">
+                    <div class="pi-icon"><i class="bi bi-calculator"></i></div>
+                    <div class="pi-body">
+                        <h3 class="pi-title">School of Engineering</h3>
+                        <p class="pi-text">Mechanical, electrical, civil, computer disciplines with collaborative labs and research immersion.</p>
+                        <ul class="pi-list">
+                            <li>Biomedical Engineering</li>
+                            <li>Computer Science</li>
+                            <li>Electrical Engineering</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="card program-card">
-                        <div class="card-body text-center">
-                            <div class="program-icon">
-                                <i class="bi bi-graph-up text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h5 class="card-title">Business School</h5>
-                            <p class="card-text">AACSB-accredited programs preparing leaders for the global marketplace with innovative curriculum.</p>
-                            <ul class="list-unstyled text-start">
-                                <li>• Finance & Economics</li>
-                                <li>• Marketing</li>
-                                <li>• Supply Chain Management</li>
-                            </ul>
-                        </div>
+                <div class="program-item surface reveal" data-delay="0.05s" data-category="business" data-level="undergraduate graduate">
+                    <div class="pi-icon"><i class="bi bi-graph-up"></i></div>
+                    <div class="pi-body">
+                        <h3 class="pi-title">Business School</h3>
+                        <p class="pi-text">Analytics-driven curriculum preparing ethically minded leaders for global markets.</p>
+                        <ul class="pi-list">
+                            <li>Finance & Economics</li>
+                            <li>Marketing</li>
+                            <li>Supply Chain Management</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="card program-card">
-                        <div class="card-body text-center">
-                            <div class="program-icon">
-                                <i class="bi bi-heart-pulse text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h5 class="card-title">School of Nursing</h5>
-                            <p class="card-text">Nationally ranked nursing programs with clinical partnerships at leading healthcare institutions.</p>
-                            <ul class="list-unstyled text-start">
-                                <li>• BSN Program</li>
-                                <li>• Nurse Practitioner</li>
-                                <li>• Healthcare Administration</li>
-                            </ul>
-                        </div>
+                <div class="program-item surface reveal" data-delay="0.1s" data-category="health" data-level="undergraduate graduate">
+                    <div class="pi-icon"><i class="bi bi-heart-pulse"></i></div>
+                    <div class="pi-body">
+                        <h3 class="pi-title">School of Nursing</h3>
+                        <p class="pi-text">Clinically integrated pathways emphasizing patient-centered care and evidence-based practice.</p>
+                        <ul class="pi-list">
+                            <li>BSN Program</li>
+                            <li>Nurse Practitioner</li>
+                            <li>Healthcare Administration</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="card program-card">
-                        <div class="card-body text-center">
-                            <div class="program-icon">
-                                <i class="bi bi-book text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h5 class="card-title">School of Arts & Sciences</h5>
-                            <p class="card-text">Liberal arts education fostering critical thinking across humanities, social sciences, and natural sciences.</p>
-                            <ul class="list-unstyled text-start">
-                                <li>• Psychology</li>
-                                <li>• Biology</li>
-                                <li>• English Literature</li>
-                            </ul>
-                        </div>
+                <div class="program-item surface reveal" data-delay="0.15s" data-category="arts-sciences" data-level="undergraduate">
+                    <div class="pi-icon"><i class="bi bi-book"></i></div>
+                    <div class="pi-body">
+                        <h3 class="pi-title">Arts & Sciences</h3>
+                        <p class="pi-text">Interdisciplinary liberal arts foundation fostering critical inquiry and discovery.</p>
+                        <ul class="pi-list">
+                            <li>Psychology</li>
+                            <li>Biology</li>
+                            <li>English Literature</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="card program-card">
-                        <div class="card-body text-center">
-                            <div class="program-icon">
-                                <i class="bi bi-capsule text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h5 class="card-title">Ernest Mario School of Pharmacy</h5>
-                            <p class="card-text">Top-ranked pharmacy school with comprehensive PharmD program and research opportunities.</p>
-                            <ul class="list-unstyled text-start">
-                                <li>• Doctor of Pharmacy</li>
-                                <li>• Pharmaceutical Sciences</li>
-                                <li>• Clinical Research</li>
-                            </ul>
-                        </div>
+                <div class="program-item surface reveal" data-delay="0.2s" data-category="health" data-level="professional graduate">
+                    <div class="pi-icon"><i class="bi bi-capsule"></i></div>
+                    <div class="pi-body">
+                        <h3 class="pi-title">Pharmacy</h3>
+                        <p class="pi-text">PharmD excellence with translational research and clinical partnerships.</p>
+                        <ul class="pi-list">
+                            <li>Doctor of Pharmacy</li>
+                            <li>Pharmaceutical Sciences</li>
+                            <li>Clinical Research</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="card program-card">
-                        <div class="card-body text-center">
-                            <div class="program-icon">
-                                <i class="bi bi-chat-quote text-primary" style="font-size: 3rem;"></i>
-                            </div>
-                            <h5 class="card-title">School of Communication</h5>
-                            <p class="card-text">Dynamic programs in journalism, media studies, and strategic communication for the digital age.</p>
-                            <ul class="list-unstyled text-start">
-                                <li>• Journalism & Media</li>
-                                <li>• Strategic Communication</li>
-                                <li>• Digital Media</li>
-                            </ul>
-                        </div>
+                <div class="program-item surface reveal" data-delay="0.25s" data-category="communications" data-level="undergraduate graduate">
+                    <div class="pi-icon"><i class="bi bi-chat-quote"></i></div>
+                    <div class="pi-body">
+                        <h3 class="pi-title">Communication</h3>
+                        <p class="pi-text">Journalism, strategic media, and digital storytelling for an evolving information landscape.</p>
+                        <ul class="pi-list">
+                            <li>Journalism & Media</li>
+                            <li>Strategic Communication</li>
+                            <li>Digital Media</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-primary btn-lg">
-                    <i class="bi bi-info-circle me-2"></i>Learn More About Our Programs
-                </a>
+
+            <div class="program-cta text-center mt-5">
+                <a href="#contact" class="btn btn-primary btn-lg"><i class="bi bi-info-circle me-2"></i>Ask About a Program</a>
             </div>
         </div>
     </section>
@@ -374,73 +337,154 @@
                 <h2 class="display-4 fw-bold">Our Campuses</h2>
                 <p class="lead">Three distinct campuses, each offering unique opportunities and experiences</p>
             </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="card campus-card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="icon-wrapper bg-primary bg-opacity-10 p-3 rounded-3 me-3">
-                                    <i class="bi bi-building text-primary fs-2"></i>
-                                </div>
-                                <div>
-                                    <h4 class="card-title mb-1">New Brunswick</h4>
-                                    <span class="badge bg-primary">Flagship Campus</span>
-                                </div>
-                            </div>
-                            <p class="card-text">The heart of Rutgers with comprehensive academic programs, world-class research facilities, and vibrant campus life.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle text-success me-2"></i>36,000+ students</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>100+ undergraduate majors</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>Big Ten athletics</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>Research opportunities</li>
-                            </ul>
+            <div class="campus-list">
+                <div class="campus-item surface reveal" data-delay="0s">
+                    <div class="ci-icon"><i class="bi bi-building"></i></div>
+                    <div class="ci-body">
+                        <div class="ci-header">
+                            <h3 class="ci-title">New Brunswick <span class="ci-tag">Flagship</span></h3>
+                        </div>
+                        <p class="ci-text">Comprehensive academic core with expansive research facilities and vibrant residential life.</p>
+                        <ul class="ci-facts">
+                            <li>36K+ students</li>
+                            <li>100+ majors</li>
+                            <li>Big Ten athletics</li>
+                            <li>Research intensive</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="campus-item surface reveal" data-delay="0.1s">
+                    <div class="ci-icon"><i class="bi bi-buildings"></i></div>
+                    <div class="ci-body">
+                        <div class="ci-header">
+                            <h3 class="ci-title">Newark <span class="ci-tag">Urban</span></h3>
+                        </div>
+                        <p class="ci-text">Professionally focused campus leveraging proximity to New York City's industry and culture.</p>
+                        <ul class="ci-facts">
+                            <li>12K+ students</li>
+                            <li>NYC adjacent</li>
+                            <li>Business & Law strength</li>
+                            <li>Internship rich</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="campus-item surface reveal" data-delay="0.2s">
+                    <div class="ci-icon"><i class="bi bi-tree"></i></div>
+                    <div class="ci-body">
+                        <div class="ci-header">
+                            <h3 class="ci-title">Camden <span class="ci-tag">Riverside</span></h3>
+                        </div>
+                        <p class="ci-text">Personalized learning environment with strong civic engagement and Philadelphia access.</p>
+                        <ul class="ci-facts">
+                            <li>6K+ students</li>
+                            <li>Small cohorts</li>
+                            <li>Philadelphia access</li>
+                            <li>Community embedded</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="student-life" class="py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="display-4 fw-bold">Student Life</h2>
+                <p class="lead">Experience a vibrant, inclusive community that supports your growth inside and outside the classroom.</p>
+            </div>
+
+            <ul class="nav nav-pills justify-content-center mb-4" id="lifeTab" role="tablist" aria-label="Student life categories">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="facilities-tab" data-bs-toggle="pill" data-bs-target="#facilities" type="button" role="tab" aria-controls="facilities" aria-selected="true">Facilities</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="housing-tab" data-bs-toggle="pill" data-bs-target="#housing" type="button" role="tab" aria-controls="housing" aria-selected="false">Housing</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="clubs-tab" data-bs-toggle="pill" data-bs-target="#clubs" type="button" role="tab" aria-controls="clubs" aria-selected="false">Clubs & Orgs</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="activities-tab" data-bs-toggle="pill" data-bs-target="#activities" type="button" role="tab" aria-controls="activities" aria-selected="false">Activities</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="lifeTabContent">
+                <div class="tab-pane fade show active" id="facilities" role="tabpanel" aria-labelledby="facilities-tab">
+                    <div class="life-grid">
+                        <div class="life-unit surface reveal" data-delay="0s">
+                            <h5><i class="bi bi-building-check me-2 text-primary"></i>Academic Centers</h5>
+                            <p>Modern classrooms, collaborative learning spaces, research libraries, and STEM labs supporting innovation.</p>
+                        </div>
+                        <div class="life-unit surface reveal" data-delay="0.05s">
+                            <h5><i class="bi bi-cpu me-2 text-primary"></i>Tech Labs</h5>
+                            <p>High‑performance computing clusters, simulation labs, media production studios, and maker spaces.</p>
+                        </div>
+                        <div class="life-unit surface reveal" data-delay="0.1s">
+                            <h5><i class="bi bi-heart-pulse-fill me-2 text-primary"></i>Wellness & Rec</h5>
+                            <p>Recreation centers, fitness complexes, aquatic facilities, intramural sports, and mental health services.</p>
+                        </div>
+                        <div class="life-unit surface reveal" data-delay="0.15s">
+                            <h5><i class="bi bi-cup-hot me-2 text-primary"></i>Dining</h5>
+                            <p>Multiple dining halls, campus cafés, nutrition programs, and flexible meal plan options.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-4">
-                    <div class="card campus-card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="icon-wrapper bg-primary bg-opacity-10 p-3 rounded-3 me-3">
-                                    <i class="bi bi-buildings text-primary fs-2"></i>
-                                </div>
-                                <div>
-                                    <h4 class="card-title mb-1">Newark</h4>
-                                    <span class="badge bg-primary">Urban Campus</span>
-                                </div>
-                            </div>
-                            <p class="card-text">Dynamic urban campus offering professional programs with close ties to New York City's business and cultural centers.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle text-success me-2"></i>12,000+ students</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>NYC proximity</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>Business & Law focus</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>Internship opportunities</li>
+
+                <div class="tab-pane fade" id="housing" role="tabpanel" aria-labelledby="housing-tab">
+                    <div class="life-split">
+                        <div class="life-panel surface">
+                            <h5><i class="bi bi-house-door me-2 text-primary"></i>Housing Options</h5>
+                            <p>First‑year students begin in community-focused residence halls; upper‑class students access suite, apartment, or themed living communities.</p>
+                            <ul class="life-bullets">
+                                <li>Traditional Halls</li>
+                                <li>Suite / Apartment Style</li>
+                                <li>Living-Learning Communities</li>
+                                <li>Off-Campus Support</li>
                             </ul>
+                            <p class="note">Verify current pricing on the official housing site.</p>
+                        </div>
+                        <div class="life-panel surface">
+                            <h6 class="mb-3">Sample Annual Housing & Dining (Illustrative)</h6>
+                            <table class="table table-sm small align-middle mb-2">
+                                <thead class="table-light"><tr><th>Plan</th><th>Est. Cost</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Standard Double</td><td>$10,500</td></tr>
+                                    <tr><td>Apartment Style</td><td>$12,800</td></tr>
+                                    <tr><td>Meal Plan (Full)</td><td>$5,600</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="text-muted small mb-0">Replace with verified university rates.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-4">
-                    <div class="card campus-card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="icon-wrapper bg-primary bg-opacity-10 p-3 rounded-3 me-3">
-                                    <i class="bi bi-tree text-primary fs-2"></i>
-                                </div>
-                                <div>
-                                    <h4 class="card-title mb-1">Camden</h4>
-                                    <span class="badge bg-primary">Riverside Campus</span>
-                                </div>
-                            </div>
-                            <p class="card-text">Intimate campus setting with personalized attention, strong community partnerships, and Philadelphia access.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle text-success me-2"></i>6,000+ students</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>Small class sizes</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>Philadelphia access</li>
-                                <li><i class="bi bi-check-circle text-success me-2"></i>Community engagement</li>
-                            </ul>
+
+                <div class="tab-pane fade" id="clubs" role="tabpanel" aria-labelledby="clubs-tab">
+                    <div class="life-grid">
+                        <div class="life-unit surface reveal" data-delay="0s">
+                            <h5><i class="bi bi-people me-2 text-primary"></i>Student Organizations</h5>
+                            <p>Hundreds of academic, cultural, service, and professional groups build leadership pathways.</p>
+                        </div>
+                        <div class="life-unit surface reveal" data-delay="0.07s">
+                            <h5><i class="bi bi-globe2 me-2 text-primary"></i>Diversity & Inclusion</h5>
+                            <p>Cultural centers and affinity networks foster belonging and global perspective.</p>
+                        </div>
+                        <div class="life-unit surface reveal" data-delay="0.14s">
+                            <h5><i class="bi bi-lightning-charge me-2 text-primary"></i>Leadership Programs</h5>
+                            <p>Mentorship, ambassador roles, and institutes develop confidence and influence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="activities" role="tabpanel" aria-labelledby="activities-tab">
+                    <div class="life-split two">
+                        <div class="life-panel surface reveal" data-delay="0s">
+                            <h5><i class="bi bi-music-note-beamed me-2 text-primary"></i>Events & Arts</h5>
+                            <p>Concerts, exhibitions, speaker series, festivals, and performance ensembles enrich campus culture.</p>
+                        </div>
+                        <div class="life-panel surface reveal" data-delay="0.12s">
+                            <h5><i class="bi bi-trophy me-2 text-primary"></i>Athletics & Recreation</h5>
+                            <p>Division I athletics, club sports, outdoor adventure, and inclusive fitness programming support wellness.</p>
                         </div>
                     </div>
                 </div>
@@ -448,7 +492,6 @@
         </div>
     </section>
 
-    <!-- Application Form Modal -->
     <div class="modal fade" id="applicationModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -505,7 +548,234 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <section id="cost-aid" class="py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="display-4 fw-bold">Cost & Financial Aid</h2>
+                <p class="lead">Invest in your future with transparent tuition, robust aid, and flexible payment options.</p>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-lg-7">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-cash-coin text-primary me-2"></i>Estimated Annual Tuition (Illustrative)</h5>
+                            <div class="table-responsive small">
+                                <table class="table table-bordered align-middle mb-3">
+                                    <thead class="table-light">
+                                        <tr><th scope="col">Program Level</th><th scope="col">In-State</th><th scope="col">Out-of-State</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Undergraduate (Full-Time)</td><td>$16,000</td><td>$34,000</td></tr>
+                                        <tr><td>Graduate (Average)</td><td>$22,000</td><td>$31,000</td></tr>
+                                        <tr><td>Professional (Pharmacy/Nursing)</td><td>$28,000</td><td>$43,000</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-muted small mb-2">Figures are placeholders. Replace with the most current published tuition schedule.</p>
+                            <div class="alert alert-warning p-2 small mb-0"><i class="bi bi-exclamation-triangle me-1"></i>Always verify tuition & mandatory fees on the official site before final submission.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-percent text-primary me-2"></i>Key Deadlines (Sample)</h5>
+                            <ul class="timeline small list-unstyled mb-3">
+                                <li class="mb-2"><strong>Nov 1:</strong> Priority Scholarship Application</li>
+                                <li class="mb-2"><strong>Jan 15:</strong> Regular Application Deadline</li>
+                                <li class="mb-2"><strong>Mar 1:</strong> FAFSA Priority Filing</li>
+                                <li class="mb-2"><strong>May 1:</strong> Enrollment Deposit Due</li>
+                            </ul>
+                            <p class="text-muted small mb-0">Confirm exact dates with official admissions publications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold"><i class="bi bi-award text-primary me-2"></i>Scholarships</h6>
+                            <p class="small mb-0">Merit-based, talent-based, and leadership awards reduce tuition burden.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold"><i class="bi bi-bank text-primary me-2"></i>Grants</h6>
+                            <p class="small mb-0">Federal and state need-based aid—no repayment required.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold"><i class="bi bi-currency-dollar text-primary me-2"></i>Loans</h6>
+                            <p class="small mb-0">Subsidized, unsubsidized, and responsible borrowing education.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold"><i class="bi bi-briefcase text-primary me-2"></i>Work-Study</h6>
+                            <p class="small mb-0">On-campus employment supporting experience and affordability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg"><i class="bi bi-envelope-open me-2"></i>Ask a Financial Aid Advisor</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="alumni" class="py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="display-4 fw-bold">Alumni Success</h2>
+                <p class="lead">A powerful global network driving innovation, leadership, and impact.</p>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-4 h-100">
+                        <h3 class="display-6 fw-bold mb-1">500K+</h3>
+                        <p class="small mb-0">Global Alumni</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-4 h-100">
+                        <h3 class="display-6 fw-bold mb-1">92%</h3>
+                        <p class="small mb-0">Career Outcomes*</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-4 h-100">
+                        <h3 class="display-6 fw-bold mb-1">300+</h3>
+                        <p class="small mb-0">Industry Partners</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card text-center p-4 h-100">
+                        <h3 class="display-6 fw-bold mb-1">65%</h3>
+                        <p class="small mb-0">Internship Participation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-star-fill text-primary me-2"></i>Notable Alumni</h5>
+                            <ul class="small mb-0">
+                                <li>Leadership in public service & policy</li>
+                                <li>Breakthroughs in biomedical research</li>
+                                <li>Founders in technology & media</li>
+                                <li>Advocates for global sustainability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-mortarboard-fill text-primary me-2"></i>Career Support</h5>
+                            <p class="small mb-2">Dedicated career centers offer advising, employer fairs, interview preparation, and alumni networking events.</p>
+                            <div class="badge bg-primary bg-opacity-25 text-primary fw-normal me-2 mb-2">Career Coaching</div>
+                            <div class="badge bg-primary bg-opacity-25 text-primary fw-normal me-2 mb-2">Global Network</div>
+                            <div class="badge bg-primary bg-opacity-25 text-primary fw-normal me-2 mb-2">Internships</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-briefcase-fill text-primary me-2"></i>Industry Connections</h5>
+                            <p class="small mb-2">Partnerships with healthcare systems, financial institutions, startups, and research labs drive experiential learning.</p>
+                            <p class="small mb-0"><em>* Career outcomes within 6 months of graduation (illustrative figure).</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg"><i class="bi bi-chat-right-text me-2"></i>Connect With Alumni Relations</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="display-4 fw-bold">Request Information</h2>
+                <p class="lead">Have questions? Our admissions team is here to help you plan your path.</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <form id="infoRequestForm" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="riFirstName" class="form-label">First Name *</label>
+                                <input type="text" id="riFirstName" class="form-control" required>
+                                <div class="invalid-feedback small">Required.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="riLastName" class="form-label">Last Name *</label>
+                                <input type="text" id="riLastName" class="form-control" required>
+                                <div class="invalid-feedback small">Required.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="riEmail" class="form-label">Email *</label>
+                                <input type="email" id="riEmail" class="form-control" required>
+                                <div class="invalid-feedback small">Enter a valid email.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="riInterest" class="form-label">Area of Interest</label>
+                                <select id="riInterest" class="form-select">
+                                    <option value="">Select...</option>
+                                    <option>Engineering</option>
+                                    <option>Business</option>
+                                    <option>Health Sciences</option>
+                                    <option>Arts & Humanities</option>
+                                    <option>Sciences</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="riMessage" class="form-label">Message / Question</label>
+                                <textarea id="riMessage" class="form-control" rows="4" placeholder="Tell us how we can help..."></textarea>
+                            </div>
+                            <div class="col-12 d-grid">
+                                <button type="button" class="btn btn-primary btn-lg" id="infoSubmitBtn" onclick="submitInfoRequest()"><i class="bi bi-send me-2"></i>Submit Request</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="infoSuccess" class="alert alert-success mt-3 d-none" role="alert" aria-live="polite"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-geo-alt text-primary me-2"></i>Admissions Offices</h5>
+                            <div class="small mb-3">
+                                <strong>New Brunswick</strong><br>83 Somerset Street<br>New Brunswick, NJ 08901
+                            </div>
+                            <div class="small mb-3">
+                                <strong>Newark</strong><br>249 University Avenue<br>Newark, NJ 07102
+                            </div>
+                            <div class="small mb-4">
+                                <strong>Camden</strong><br>303 Cooper Street<br>Camden, NJ 08102
+                            </div>
+                            <p class="small"><i class="bi bi-telephone me-2"></i><a class="text-decoration-none" href="tel:+1-732-932-1766">(732) 932-1766</a></p>
+                            <p class="small"><i class="bi bi-envelope me-2"></i><a class="text-decoration-none" href="mailto:admissions@rutgers.edu">admissions@rutgers.edu</a></p>
+                            <p class="small mb-0"><i class="bi bi-globe me-2"></i><a class="text-decoration-none" href="https://www.rutgers.edu">www.rutgers.edu</a></p>
+                            <hr>
+                            <p class="text-muted small mb-0">We respect your privacy. Submitted information is used solely for admissions outreach.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
@@ -606,9 +876,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
