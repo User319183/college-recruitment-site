@@ -41,6 +41,10 @@ section+section::before {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0))
 }
 
+.hero-section + section::before {
+    display: none;
+}
+
 section.compact {
     padding: 4rem 0
 }
@@ -128,39 +132,4 @@ p {
 
 .small {
     font-size: .85rem !important
-}
-
-@media (max-width:768px) {
-    body {
-        padding-top: 60px
-    }
-
-    .hero-section {
-        height: 70vh
-    }
-
-    .hero-section h1 {
-        font-size: 2.5rem !important
-    }
-
-    .hero-buttons .btn {
-        display: block;
-        width: 100%;
-        margin: .5rem 0
-    }
-
-    .stat-card {
-        padding: 1rem;
-        margin-bottom: 1rem
-    }
-}
-
-@media (max-width:576px) {
-    .hero-section h1 {
-        font-size: 2rem !important
-    }
-
-    .display-4 {
-        font-size: 2rem !important
-    }
 }

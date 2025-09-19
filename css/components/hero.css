@@ -1,6 +1,8 @@
 .hero-section {
-    min-height: calc(100vh - var(--nav-height));
-    min-height: calc(100svh - var(--nav-height));
+    /* Fill the viewport minus the fixed navbar height */
+    min-height: calc(100vh - var(--nav-height)); /* fallback */
+    min-height: calc(100svh - var(--nav-height)); /* small viewport units for mobile UI chrome */
+    min-height: calc(100lvh - var(--nav-height)); /* large viewport units as an extra guard */
     background: radial-gradient(circle at 30% 30%, #d91d48 0%, var(--primary-dark) 55%, #5d0016 100%);
     display: flex;
     align-items: center;
@@ -8,8 +10,6 @@
     overflow: hidden;
     margin-bottom: 0;
     padding: 0;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px
 }
 
 .hero-section::before {
@@ -41,7 +41,6 @@
 }
 
 .hero-section h1 {
-    font-size: 4rem;
     font-weight: 900;
     margin-bottom: 2rem;
     text-shadow: 0 4px 20px rgba(0, 0, 0, .1);
