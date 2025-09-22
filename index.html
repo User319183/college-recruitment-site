@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rutgers University - Excellence in Education</title>
 
@@ -31,7 +31,7 @@
                 <img src="images/rutgersLogo.png" alt="Rutgers University" width="35" height="35" class="me-2">
                 <span>Rutgers University</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -64,6 +64,29 @@
             </div>
         </div>
     </nav>
+
+    <!-- Full-screen mobile navigation (Bootstrap Offcanvas) -->
+    <div class="offcanvas offcanvas-top offcanvas-mobile h-100" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+        <div class="offcanvas-header border-0">
+            <a class="navbar-brand d-flex align-items-center text-white" href="#home" id="mobileNavLabel">
+                <img src="images/rutgersLogo.png" alt="Rutgers University" width="32" height="32" class="me-2">
+                <span>Rutgers University</span>
+            </a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center text-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#home" data-dismiss="offcanvas">Home</a></li>
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#about" data-dismiss="offcanvas">About</a></li>
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#programs" data-dismiss="offcanvas">Programs</a></li>
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#campuses" data-dismiss="offcanvas">Campuses</a></li>
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#student-life" data-dismiss="offcanvas">Student Life</a></li>
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#cost-aid" data-dismiss="offcanvas">Cost &amp; Aid</a></li>
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#alumni" data-dismiss="offcanvas">Alumni</a></li>
+                <li class="nav-item"><a class="nav-link fs-4 fw-semibold text-white py-2" href="#contact" data-dismiss="offcanvas">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <section id="home" class="hero-section">
         <div class="hero-overlay">
@@ -271,7 +294,7 @@
                 <h2 class="display-4 fw-bold">Schools & Programs</h2>
                 <p class="lead">Discover world-class education across our renowned schools and colleges</p>
             </div>
-            <div class="programs-grid minimal-grid">
+            <div class="programs-grid spacious">
                 <div class="program-item surface reveal" data-delay="0s" data-category="engineering"
                     data-level="undergraduate graduate">
                     <div class="pi-icon"><i class="bi bi-calculator"></i></div>

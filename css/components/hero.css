@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     margin-bottom: 0;
     padding: 0;
 }
@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, .1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, .08) 0%, transparent 50%), linear-gradient(45deg, rgba(255, 255, 255, .03) 0%, transparent 100%);
+    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, .08) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255, 255, 255, .06) 0%, transparent 50%), linear-gradient(45deg, rgba(255, 255, 255, .025) 0%, transparent 100%);
     z-index: 1
 }
 
@@ -29,21 +29,23 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 120px;
+    height: 80px;
     background: linear-gradient(180deg, transparent 0%, rgba(248, 249, 250, .8) 100%);
     z-index: 2
 }
 
 .hero-overlay {
     position: relative;
-    z-index: 3;
-    width: 100%
+    z-index: 3; /* above ::before and ::after */
+    width: 100%;
+    padding-block: 1.25rem; /* small breathing room to avoid clipping */
 }
 
 .hero-section h1 {
     font-weight: 900;
     margin-bottom: 2rem;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+    line-height: 1.05; /* slightly looser than lh-1 to prevent cropping */
+    text-shadow: 0 3px 14px rgba(0, 0, 0, .08);
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, .9) 100%);
     -webkit-background-clip: text;

@@ -89,6 +89,45 @@
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
 }
 
+/* Spacious modifier: larger cards, fewer columns, more breathing room */
+.programs-grid.spacious {
+    gap: 2.5rem 2.5rem;
+    /* Use a larger min size so desktop tends toward 3 columns (6 items -> 3x2) */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.programs-grid.spacious .program-item {
+    padding: 1.75rem 1.75rem 1.5rem;
+    gap: 1.1rem;
+    flex-direction: column; /* stack icon above text */
+    align-items: flex-start;
+}
+
+.programs-grid.spacious .program-item .pi-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 1.9rem;
+    border-radius: 16px;
+}
+
+.programs-grid.spacious .pi-title {
+    font-size: 1.15rem;
+}
+
+.programs-grid.spacious .pi-text {
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.programs-grid.spacious .pi-list {
+    gap: .45rem 1rem;
+}
+
+.programs-grid.spacious .pi-list li {
+    font-size: .7rem;
+    padding: .3rem .65rem .25rem .8rem;
+}
+
 .program-item {
     background: #fff;
     border: 1px solid rgba(0, 0, 0, .06);
@@ -317,7 +356,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 80% 15%, rgba(204, 0, 51, 0.18), transparent 65%);
+    background: radial-gradient(circle at 80% 15%, rgba(204, 0, 51, var(--orb-alpha-surface)), transparent 65%);
     opacity: 0;
     transition: opacity .6s var(--cubic-bezier);
     pointer-events: none
@@ -325,7 +364,7 @@
 
 .program-item:hover::after,
 .campus-item:hover::after {
-    opacity: .55
+    opacity: .45
 }
 
 .program-item:focus-within,

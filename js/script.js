@@ -71,6 +71,13 @@ function initializeNavigation() {
                     behavior: 'smooth'
                 });
             }
+
+            // If inside offcanvas, close it on click
+            const offcanvasEl = this.closest('.offcanvas');
+            if (offcanvasEl) {
+                const instance = bootstrap.Offcanvas.getInstance(offcanvasEl) || new bootstrap.Offcanvas(offcanvasEl);
+                instance.hide();
+            }
         });
     });
     

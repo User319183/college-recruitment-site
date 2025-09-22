@@ -8,7 +8,7 @@
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, .98) !important;
+    background: rgba(255, 255, 255, .15) !important;
     box-shadow: var(--shadow-md);
     padding: .75rem 0
 }
@@ -16,6 +16,41 @@
 .navbar.navbar-dark {
     background: var(--primary-color) !important;
     backdrop-filter: none
+}
+
+/* Full-screen mobile offcanvas menu */
+.offcanvas-mobile.offcanvas-top {
+    height: 100vh !important;
+}
+
+.offcanvas-mobile {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: #fff;
+}
+
+.offcanvas-mobile .offcanvas-header {
+    padding: 1rem 1.25rem;
+}
+
+/* Ensure brand text in offcanvas is white (override base .navbar-brand color) */
+.offcanvas-mobile .navbar-brand,
+.offcanvas-mobile .navbar-brand span {
+    color: #fff !important;
+}
+
+.offcanvas-mobile .offcanvas-body {
+    padding: 2rem 1.25rem;
+}
+
+.offcanvas-mobile .nav-link {
+    color: rgba(255, 255, 255, 0.95) !important;
+    transition: transform .2s ease, color .2s ease;
+}
+
+.offcanvas-mobile .nav-link:hover,
+.offcanvas-mobile .nav-link:focus {
+    color: #fff !important;
+    transform: translateY(-2px);
 }
 
 .navbar-brand {
@@ -43,7 +78,7 @@
     padding: .75rem 1.25rem !important;
     border-radius: 12px;
     transition: var(--transition);
-    color: var(--gray-700) !important;
+    color: #fff !important;
     position: relative;
     overflow: hidden
 }

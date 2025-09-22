@@ -13,8 +13,12 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: radial-gradient(circle at 85% 15%, rgba(204, 0, 51, 0.08), transparent 60%);
-    opacity: .85;
+    background: radial-gradient(
+        circle at 85% 15%,
+        rgba(var(--orb-color, 204, 0, 51), var(--orb-alpha-surface, 0.08)),
+        transparent 60%
+    );
+    opacity: 1;
     pointer-events: none;
     transition: opacity .6s var(--cubic-bezier)
 }
