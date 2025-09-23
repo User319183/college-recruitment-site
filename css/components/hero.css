@@ -1,13 +1,12 @@
 .hero-section {
-    /* Fill the viewport minus the fixed navbar height */
-    min-height: calc(100vh - var(--nav-height)); /* fallback */
-    min-height: calc(100svh - var(--nav-height)); /* small viewport units for mobile UI chrome */
-    min-height: calc(100lvh - var(--nav-height)); /* large viewport units as an extra guard */
+    min-height: calc(100vh - var(--nav-height));
+    min-height: calc(100svh - var(--nav-height));
+    min-height: calc(100lvh - var(--nav-height));
     background: radial-gradient(circle at 30% 30%, #d91d48 0%, var(--primary-dark) 55%, #5d0016 100%);
     display: flex;
     align-items: center;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     margin-bottom: 0;
     padding: 0;
 }
@@ -24,27 +23,20 @@
 }
 
 .hero-section::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(180deg, transparent 0%, rgba(248, 249, 250, .8) 100%);
-    z-index: 2
+    content: none;
 }
 
 .hero-overlay {
     position: relative;
-    z-index: 3; /* above ::before and ::after */
+    z-index: 3;
     width: 100%;
-    padding-block: 1.25rem; /* small breathing room to avoid clipping */
+    padding-block: 1.25rem;
 }
 
 .hero-section h1 {
     font-weight: 900;
     margin-bottom: 2rem;
-    line-height: 1.05; /* slightly looser than lh-1 to prevent cropping */
+    line-height: 1.05;
     text-shadow: 0 3px 14px rgba(0, 0, 0, .08);
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, .9) 100%);
@@ -149,4 +141,20 @@
     background: var(--white);
     color: var(--primary-color);
     transform: translateY(-2px)
+}
+
+.hero-section.soft-glow::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(180deg, transparent 0%, rgba(248, 249, 250, .5) 100%);
+    z-index: 2;
+}
+
+.hero-section.no-glow::before,
+.hero-section.no-glow::after {
+    content: none !important;
 }
