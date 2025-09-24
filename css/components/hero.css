@@ -2,13 +2,39 @@
     min-height: calc(100vh - var(--nav-height));
     min-height: calc(100svh - var(--nav-height));
     min-height: calc(100lvh - var(--nav-height));
-    background: radial-gradient(circle at 30% 30%, #d91d48 0%, var(--primary-dark) 55%, #5d0016 100%);
+    --hero-tint-start: rgba(217, 29, 72, 0.55);
+    --hero-tint-end: rgba(93, 0, 22, 0.65);
+    background: linear-gradient(135deg, var(--hero-tint-start) 0%, var(--hero-tint-end) 100%), url("../../images/rutgers.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--primary-dark);
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     margin-bottom: 0;
     padding: 0;
+}
+
+.hero-section.tint-strong {
+    --hero-tint-start: rgba(217, 29, 72, 0.78);
+    --hero-tint-end: rgba(93, 0, 22, 0.88);
+}
+
+.hero-section.tint-medium {
+    --hero-tint-start: rgba(217, 29, 72, 0.55);
+    --hero-tint-end: rgba(93, 0, 22, 0.65);
+}
+
+.hero-section.tint-light {
+    --hero-tint-start: rgba(217, 29, 72, 0.35);
+    --hero-tint-end: rgba(93, 0, 22, 0.45);
+}
+
+.hero-section.no-tint {
+    --hero-tint-start: rgba(0, 0, 0, 0.15);
+    --hero-tint-end: rgba(0, 0, 0, 0.25);
 }
 
 .hero-section::before {
