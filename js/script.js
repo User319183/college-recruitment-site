@@ -1,15 +1,27 @@
+/**
+ * Main bootstrapping block: waits for DOM readiness and then wires up
+ * all interactive modules (counters, navigation enhancements, form logic
+ * and scroll / reveal animations). Kept intentionally lean so each concern
+ * lives in its own initializer for readability & potential lazy-loading.
+ */
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Rutgers University website initialized');
 
-    initializeCounters();
-    initializeScrollEffects();
-    initializeNavigation();
-    initializeInfoRequestForm();
-    initializeRevealAnimations();
+    // Kick off individual feature initializers.
+    initializeCounters();          // Animated statistic counters (lazy start via IntersectionObserver)
+    initializeScrollEffects();     // Simple fade-in elements when scrolled into view
+    initializeNavigation();        // Smooth scrolling + active link highlighting
+    initializeInfoRequestForm();   // Basic validation wiring for info request form
+    initializeRevealAnimations();  // More elaborate staggered reveal animations
 
     console.log('All interactive elements initialized');
 });
 
+/**
+ * Sets up animated number counters that increment once the elements
+ * become sufficiently visible in the viewport.
+ * Uses IntersectionObserver to avoid doing work when off-screen.
+ */
 function initializeCounters() {
     const counters = [
         { element: document.getElementById('student-count'), target: 71000, suffix: '+' },
@@ -35,12 +47,19 @@ function initializeCounters() {
         });
     }, observerOptions);
 
+    // Observe each counter so animation only triggers once when visible.
     counters.forEach(counter => {
         if (counter.element) {
             counterObserver.observe(counter.element);
         }
     });
 }
+/**
+ * Performs the counter animation for a single element.
+ * @param {HTMLElement} element - DOM element whose textContent we mutate.
+ * @param {number} target - Final number to reach.
+ * @param {string} [suffix] - Optional suffix appended (e.g. '+').
+ */
 function animateCounter(element, target, suffix = '') {
     element.classList.add('counting');
     let current = 0;
@@ -59,6 +78,11 @@ function animateCounter(element, target, suffix = '') {
         element.textContent = formattedNumber + suffix;
     }, stepTime);
 }
+/**
+ * Wires up smooth scrolling for in-page anchor links and updates
+ * active navigation state while scrolling. Also auto-hides the
+ * offcanvas menu after a selection on small screens.
+ */
 function initializeNavigation() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -81,8 +105,13 @@ function initializeNavigation() {
         });
     });
 
+    // Update active nav highlighting as user scrolls.
     window.addEventListener('scroll', updateActiveNavigation);
 }
+/**
+ * Determines which section is currently within the viewport bounds
+ * and applies an 'active' class to the corresponding nav link.
+ */
 function updateActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
@@ -103,6 +132,10 @@ function updateActiveNavigation() {
         }
     });
 }
+/**
+ * Adds viewport-based fade-in effect to elements marked with `.fade-in`.
+ * Lightweight progressive enhancement (no work done for unsupported browsers).
+ */
 function initializeScrollEffects() {
     const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -121,6 +154,10 @@ function initializeScrollEffects() {
         fadeObserver.observe(element);
     });
 }
+/**
+ * Sets up more configurable reveal animations for elements with `.reveal`.
+ * Elements can optionally specify a custom delay via `data-delay` attribute.
+ */
 function initializeRevealAnimations() {
     const revealEls = document.querySelectorAll('.reveal');
     if (!revealEls.length) return;
@@ -137,6 +174,10 @@ function initializeRevealAnimations() {
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => observer.observe(el));
 }
+/**
+ * Opens the application modal and focuses the first input once shown
+ * for improved accessibility & keyboard workflow.
+ */
 function showApplicationForm() {
     const modal = new bootstrap.Modal(document.getElementById('applicationModal'));
     modal.show();
@@ -146,6 +187,12 @@ function showApplicationForm() {
     });
 }
 
+/**
+ * Handles submission of the mock application form: basic client-side
+ * validity check, optimistic UI loading state, simulated async delay,
+ * and event tracking.
+ * NOTE: This uses console logging only (no network persistence).
+ */
 function submitApplication() {
     const form = document.getElementById('applicationForm');
     const submitButton = event.target;
@@ -184,6 +231,11 @@ function submitApplication() {
 
     }, 2000);
 }
+/**
+ * Generic transient success toast/message creator. Reuses existing
+ * container if already created.
+ * @param {string} message - User-facing success copy.
+ */
 function showSuccessMessage(message) {
     let successDiv = document.querySelector('.success-message');
     if (!successDiv) {
@@ -199,9 +251,19 @@ function showSuccessMessage(message) {
         successDiv.style.display = 'none';
     }, 5000);
 }
+/**
+ * Lightweight analytics stub. In a production setup this would forward
+ * data to an analytics endpoint instead of console logging.
+ * @param {string} eventName
+ * @param {*} eventData
+ */
 function trackEvent(eventName, eventData) {
     console.log(`Event tracked: ${eventName}`, eventData);
 }
+/**
+ * Binds real-time validation for the Info Request form fields so the
+ * user receives immediate feedback while typing.
+ */
 function initializeInfoRequestForm() {
     const form = document.getElementById('infoRequestForm');
     if (!form) return;
@@ -210,6 +272,10 @@ function initializeInfoRequestForm() {
         el && el.addEventListener('input', () => validateBasic(el));
     });
 }
+/**
+ * Minimal validity styling toggle for real-time form feedback.
+ * @param {HTMLElement} field
+ */
 function validateBasic(field) {
     if (!field) return;
     if (field.checkValidity()) {
@@ -220,6 +286,11 @@ function validateBasic(field) {
         field.classList.add('is-invalid');
     }
 }
+/**
+ * Submission handler for the Info Request form. Validates required
+ * fields, simulates async submission, displays success feedback, and
+ * logs a tracking event.
+ */
 function submitInfoRequest() {
     const form = document.getElementById('infoRequestForm');
     if (!form) return;
@@ -258,6 +329,11 @@ function submitInfoRequest() {
         trackEvent('info_request_submitted', payload.interest);
     }, 1500);
 }
+/**
+ * Simple client-side filter for program card elements based on
+ * a data-category attribute. Pass 'all' to show everything.
+ * @param {string} criteria
+ */
 function filterPrograms(criteria) {
     const cards = document.querySelectorAll('#programs [data-category]');
     cards.forEach(card => {
@@ -265,6 +341,13 @@ function filterPrograms(criteria) {
         card.style.display = matches ? '' : 'none';
     });
 }
+/**
+ * Returns a debounced version of a function that delays execution until
+ * after `wait` ms have elapsed since the last invocation.
+ * @param {Function} func - Function to debounce
+ * @param {number} wait - Milliseconds to wait
+ * @returns {Function}
+ */
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -276,9 +359,17 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
+/**
+ * Placeholder for potential dynamic content loading hook.
+ * Currently logs to console only.
+ */
 function loadDynamicContent(section) {
     console.log(`Loading content for section: ${section}`);
 }
+/**
+ * Adds blur & input validation listeners to all bootstrap-styled inputs
+ * to give real-time feedback as users correct errors.
+ */
 function enhanceFormInputs() {
     const inputs = document.querySelectorAll('.form-control, .form-select');
     inputs.forEach(input => {
@@ -294,6 +385,11 @@ function enhanceFormInputs() {
     });
 }
 
+/**
+ * Generic validity indicator toggle used by multiple form handlers.
+ * @param {HTMLElement} field
+ * @returns {boolean} whether field is valid
+ */
 function validateField(field) {
     const isValid = field.checkValidity();
     field.classList.remove('is-valid', 'is-invalid');
@@ -301,8 +397,14 @@ function validateField(field) {
 
     return isValid;
 }
+// Secondary DOMContentLoaded listener: sets up baseline real-time validation
+// styling for generic form inputs (separate from main initializer for clarity).
 document.addEventListener('DOMContentLoaded', enhanceFormInputs);
 
+/**
+ * Collapses the mobile navbar after selecting a link (improves UX so the
+ * user immediately sees navigated content without needing to close menu manually).
+ */
 document.addEventListener('DOMContentLoaded', function () {
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
