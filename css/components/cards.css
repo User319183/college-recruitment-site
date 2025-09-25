@@ -252,6 +252,8 @@
     position: relative
 }
 
+.campus-item .ci-body { width: 100%; }
+
 .campus-item.variant-soft {
     background: linear-gradient(140deg, #ffffff, #f6f7f9);
 }
@@ -438,14 +440,12 @@
     box-shadow: var(--shadow-focus-ring)
 }
 
-/* (Removed section background variants per user request) */
 .section-alt,
 .section-soft,
 .section-contrast {
     background: #ffffff;
 }
 
-/* Ribbon badge utility inside cards */
 .card-ribbon {
     position: absolute;
     top: 14px;
@@ -461,7 +461,6 @@
     box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .3);
 }
 
-/* Dark mode refinement */
 body.dark-mode .section-alt,
 body.dark-mode .section-soft,
 body.dark-mode .section-contrast {
