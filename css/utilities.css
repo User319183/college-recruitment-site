@@ -143,27 +143,6 @@
     color: #fff
 }
 
-@media (prefers-reduced-motion:reduce) {
-
-    .surface,
-    .program-item,
-    .campus-item,
-    .life-unit,
-    .life-panel,
-    .stat-card,
-    .reveal {
-        transition: none !important
-    }
-
-    .surface:hover,
-    .program-item:hover,
-    .campus-item:hover,
-    .life-unit:hover,
-    .life-panel:hover,
-    .stat-card:hover {
-        transform: none !important
-    }
-}
 
 ::-webkit-scrollbar {
     width: 8px
@@ -213,17 +192,4 @@ body.dark-mode .ci-facts li {
 
 body.dark-mode .ci-tag {
     background: var(--primary-light)
-}
-
-@media (forced-colors:active) {
-
-    .surface,
-    .program-item,
-    .campus-item,
-    .life-unit,
-    .life-panel,
-    .stat-card {
-        forced-color-adjust: auto;
-        border: 1px solid CanvasText
-    }
 }

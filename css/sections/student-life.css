@@ -118,34 +118,3 @@
     color: var(--gray-600);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06)
 }
-
-@media (max-width:768px) {
-    #student-life .nav-pills .nav-link {
-        padding: .5rem 1rem
-    }
-
-    #student-life .nav-pills {
-        gap: .45rem .5rem;
-        margin-bottom: 1.5rem
-    }
-
-    .life-grid {
-        gap: 1.25rem
-    }
-
-    .life-unit,
-    .life-panel {
-        padding: 1.1rem 1.1rem .95rem
-    }
-
-    .life-unit h5,
-    .life-panel h5,
-    .life-panel h6 {
-        font-size: .85rem
-    }
-
-    .life-unit p,
-    .life-panel p {
-        font-size: .75rem
-    }
-}

@@ -18,7 +18,6 @@
     backdrop-filter: none
 }
 
-/* Full-screen mobile offcanvas menu */
 .offcanvas-mobile.offcanvas-top {
     height: 100vh !important;
 }
@@ -32,7 +31,6 @@
     padding: 1rem 1.25rem;
 }
 
-/* Ensure brand text in offcanvas is white (override base .navbar-brand color) */
 .offcanvas-mobile .navbar-brand,
 .offcanvas-mobile .navbar-brand span {
     color: #fff !important;

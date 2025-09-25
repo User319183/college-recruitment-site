@@ -101,13 +101,3 @@ footer .copyright {
 .back-to-top:hover {
     background: var(--primary-dark)
 }
-
-@media (max-width:576px) {
-    footer {
-        padding: 3rem 0 2rem
-    }
-
-    footer .col-md-3:not(:last-child) {
-        margin-bottom: 2rem
-    }
-}

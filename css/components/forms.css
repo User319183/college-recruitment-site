@@ -129,25 +129,3 @@
 .loading-indicator.show {
     display: flex
 }
-
-@media (max-width:576px) {
-    .modal-dialog {
-        margin: 1.25rem
-    }
-
-    .modal-content {
-        border-radius: 22px
-    }
-
-    .modal-body {
-        padding: 1rem 1.25rem 1.5rem
-    }
-
-    .modal-header {
-        padding: 1.25rem 1.25rem 0
-    }
-
-    .modal-footer {
-        padding: .65rem 1.25rem 1.25rem
-    }
-}

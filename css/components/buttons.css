@@ -97,18 +97,3 @@
 .btn-primary:hover {
     box-shadow: 0 10px 28px -6px rgba(204, 0, 51, .55)
 }
-
-@media (prefers-reduced-motion:reduce) {
-
-    .btn,
-    .hero-buttons .btn {
-        transition: none
-    }
-
-    .btn:hover,
-    .btn:active,
-    .btn-primary:hover,
-    .hero-buttons .btn:hover {
-        transform: none !important
-    }
-}

@@ -89,17 +89,15 @@
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
 }
 
-/* Spacious modifier: larger cards, fewer columns, more breathing room */
 .programs-grid.spacious {
     gap: 2.5rem 2.5rem;
-    /* Use a larger min size so desktop tends toward 3 columns (6 items -> 3x2) */
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 
 .programs-grid.spacious .program-item {
     padding: 1.75rem 1.75rem 1.5rem;
     gap: 1.1rem;
-    flex-direction: column; /* stack icon above text */
+    flex-direction: column;
     align-items: flex-start;
 }
 
@@ -383,52 +381,4 @@
     z-index: 5;
     text-indent: -200vw;
     overflow: hidden
-}
-
-@media (max-width:576px) {
-    .programs-grid {
-        gap: 2rem 1.5rem
-    }
-
-    .program-item {
-        flex-direction: row
-    }
-
-    .pi-icon {
-        flex: 0 0 40px;
-        height: 40px;
-        font-size: 1.2rem
-    }
-}
-
-@media (max-width:620px) {
-    .campus-item {
-        flex-direction: row;
-        align-items: flex-start
-    }
-
-    .ci-icon {
-        flex: 0 0 48px;
-        height: 48px;
-        font-size: 1.4rem
-    }
-}
-
-@media (max-width:768px) {
-
-    .program-item,
-    .campus-item {
-        padding: 1.15rem 1.2rem
-    }
-
-    .program-item .pi-icon,
-    .ci-icon {
-        width: 52px;
-        height: 52px;
-        font-size: 1.35rem
-    }
-
-    .stat-card h3 {
-        font-size: 2rem
-    }
 }
