@@ -13,11 +13,9 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: radial-gradient(
-        circle at 85% 15%,
-        rgba(var(--orb-color, 204, 0, 51), var(--orb-alpha-surface, 0.08)),
-        transparent 60%
-    );
+    background: radial-gradient(circle at 85% 15%,
+            rgba(var(--orb-color, 204, 0, 51), var(--orb-alpha-surface, 0.08)),
+            transparent 60%);
     opacity: 1;
     pointer-events: none;
     transition: opacity .6s var(--cubic-bezier)
@@ -130,6 +128,25 @@
 
 .surface.accent-bar:hover::before {
     filter: brightness(1.1)
+}
+
+.bg-stripe-light {
+    background: repeating-linear-gradient(45deg, #fafbfc, #fafbfc 10px, #f2f4f6 10px, #f2f4f6 20px);
+}
+
+.bg-dotted {
+    background-image: radial-gradient(#d0d4d9 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+.grid-auto-fit {
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.grid-tight {
+    gap: 1rem;
 }
 
 .surface.glass {

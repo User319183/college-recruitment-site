@@ -9,6 +9,14 @@
     overflow: hidden
 }
 
+.stat-card.gradient {
+    background: linear-gradient(145deg, #ffffff, #f4f5f7);
+}
+
+.stat-card.tint {
+    background: radial-gradient(circle at 78% 18%, rgba(204, 0, 51, .08), transparent 60%), #fff;
+}
+
 .stat-card::before {
     content: "";
     position: absolute;
@@ -94,6 +102,19 @@
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 
+.programs-grid.masonry {
+    grid-auto-flow: dense;
+    grid-auto-rows: 1fr;
+}
+
+.programs-grid.masonry .program-item:nth-child(3n) {
+    grid-row: span 2;
+}
+
+.programs-grid.masonry .program-item:nth-child(5n) {
+    grid-column: span 2;
+}
+
 .programs-grid.spacious .program-item {
     padding: 1.75rem 1.75rem 1.5rem;
     gap: 1.1rem;
@@ -128,7 +149,7 @@
 
 .program-item {
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, .06);
+    border: 1px solid rgba(0, 0, 0, .05);
     border-radius: 26px;
     padding: 1.4rem 1.5rem 1.3rem 1.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
@@ -137,6 +158,21 @@
     align-items: flex-start;
     gap: 1.25rem;
     position: relative
+}
+
+.program-item.layered {
+    background: linear-gradient(155deg, #ffffff, #f6f7f9);
+    box-shadow: 0 4px 14px -4px rgba(0, 0, 0, .12), 0 12px 34px -10px rgba(0, 0, 0, .12);
+}
+
+.program-item.accent-edge {
+    border: 1px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box, var(--gradient-accent) border-box;
+}
+
+.program-item.dark-invert {
+    background: #121315;
+    color: #f5f6f7;
 }
 
 .program-item .pi-icon {
@@ -187,7 +223,8 @@
 }
 
 .program-item:hover {
-    transform: translateY(-4px)
+    transform: translateY(-6px);
+    box-shadow: 0 10px 32px -8px rgba(0, 0, 0, .28), 0 18px 42px -14px rgba(0, 0, 0, .16);
 }
 
 .program-item:hover .pi-title {
@@ -206,13 +243,29 @@
 
 .campus-item {
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, .06);
+    border: 1px solid rgba(0, 0, 0, .05);
     border-radius: 30px;
     padding: 1.65rem 1.75rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .05);
     display: flex;
     gap: 1.4rem;
     position: relative
+}
+
+.campus-item.variant-soft {
+    background: linear-gradient(140deg, #ffffff, #f6f7f9);
+}
+
+.campus-item.variant-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 15%, rgba(204, 0, 51, .10), transparent 65%);
+    mix-blend-mode: multiply;
+}
+
+.campus-item.variant-glow {
+    overflow: hidden;
 }
 
 .ci-icon {
@@ -284,7 +337,8 @@
 }
 
 .campus-item:hover {
-    transform: translateY(-4px)
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 14px 36px -10px rgba(0, 0, 0, .28), 0 6px 20px -6px rgba(0, 0, 0, .18);
 }
 
 .life-grid {
@@ -299,6 +353,16 @@
     border-radius: 24px;
     padding: 1.25rem 1.25rem 1.1rem;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .04)
+}
+
+.life-unit.gradient,
+.life-panel.gradient {
+    background: linear-gradient(150deg, #ffffff, #f5f6f8);
+}
+
+.life-unit.tinted,
+.life-panel.tinted {
+    background: radial-gradient(circle at 75% 22%, rgba(204, 0, 51, .08), transparent 60%), #fff;
 }
 
 .life-unit h5,
@@ -319,8 +383,8 @@
 
 .life-panel:hover,
 .life-unit:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 22px -6px rgba(0, 0, 0, .16)
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .28), 0 8px 18px -6px rgba(0, 0, 0, .16)
 }
 
 .stats-section .row.g-4 {
@@ -372,6 +436,49 @@
 .stat-card:focus-within {
     outline: none;
     box-shadow: var(--shadow-focus-ring)
+}
+
+/* (Removed section background variants per user request) */
+.section-alt,
+.section-soft,
+.section-contrast {
+    background: #ffffff;
+}
+
+/* Ribbon badge utility inside cards */
+.card-ribbon {
+    position: absolute;
+    top: 14px;
+    right: -42px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: .35rem 2.75rem .3rem;
+    font-size: .55rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: rotate(38deg);
+    font-weight: 700;
+    box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .3);
+}
+
+/* Dark mode refinement */
+body.dark-mode .section-alt,
+body.dark-mode .section-soft,
+body.dark-mode .section-contrast {
+    background: linear-gradient(160deg, #1c1f22, #151719);
+}
+
+body.dark-mode .program-item.layered {
+    background: linear-gradient(155deg, #222528, #17191b);
+}
+
+body.dark-mode .campus-item.variant-soft {
+    background: linear-gradient(155deg, #222528, #1a1c1e);
+}
+
+body.dark-mode .life-unit.gradient,
+body.dark-mode .life-panel.gradient {
+    background: linear-gradient(150deg, #24272a, #181a1c);
 }
 
 .program-item a.stretched,

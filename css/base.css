@@ -41,7 +41,7 @@ section+section::before {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0))
 }
 
-.hero-section + section::before {
+.hero-section+section::before {
     display: none;
 }
 
